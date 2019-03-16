@@ -4,7 +4,11 @@
   "description": "Multipart upload example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "jsdoc:build": "./node_modules/.bin/jsdoc ./src/**/*.js",
+    "test": "./node_modules/.bin/mocha --ui bdd -c --check-leaks -R spec --timeout 5000 --exit './tests/index.js'",
+    "nodemon:test": "./node_modules/.bin/nodemon --watch src --watch tests --watch index.js --exec npm test",
+    "nodemon:start": "./node_modules/.bin/nodemon --watch src --watch index.js --exec npm start"
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,28 @@
   "bugs": {
     "url": "https://github.com/demeter-macik/multipart-upload-example/issues"
   },
-  "homepage": "https://github.com/demeter-macik/multipart-upload-example#readme"
+  "homepage": "https://github.com/demeter-macik/multipart-upload-example#readme",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "form-data": "^2.3.3",
+    "jsdoc": "^3.5.5",
+    "lodash": "^4.17.11",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "ajv": "^6.10.0",
+    "busboy": "^0.3.0",
+    "express": "^4.16.4",
+    "unzip-stream": "^0.3.0",
+    "uuid": "^3.3.2"
+  }
 }
