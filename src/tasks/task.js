@@ -31,7 +31,7 @@ class Task extends EventEmitter {
   constructor(readable, writable, name, options) {
     super();
 
-    const optionsCopy = Object.assign({ successEvent: 'data' }, options);
+    const optionsCopy = { successEvent: 'data', ...options };
     this.successEvent = optionsCopy.successEvent;
     this.dataEvent = optionsCopy.dataEvent;
     this.taskList = [];

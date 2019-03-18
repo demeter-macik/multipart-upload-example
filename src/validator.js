@@ -39,10 +39,11 @@ const uploadFilter = {
  * @param {object} [options] - AJV options {@link https://github.com/epoberezkin/ajv#options|AJV}
  */
 function createValidator(options) {
-  const opts = Object.assign({
+  const opts = {
     removeAdditional: true,
-    schemas: [uploadFilter]
-  }, options);
+    schemas: [uploadFilter],
+    ...options
+  };
 
   return new Validator(opts);
 }

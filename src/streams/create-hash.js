@@ -11,10 +11,11 @@ const crypto = require('crypto');
  * @memberof Streams
  */
 function createHash(options) {
-  const optionsCopy = Object.assign({
+  const optionsCopy = {
     algorithm: 'md5',
-    encoding: 'hex'
-  }, options);
+    encoding: 'hex',
+    ...options
+  };
 
   return crypto
     .createHash(optionsCopy.algorithm, {

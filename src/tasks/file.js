@@ -3,6 +3,7 @@ const merge = require('lodash/merge');
 const { Task } = require('./task.js');
 
 /**
+ * This task is using to group results for each file
  * @memberof Tasks
  * @extends Task
  */
@@ -13,7 +14,8 @@ class FileTask extends Task {
    * @param {object} options - Task options
    */
   constructor(name, options) {
-    const optionsCopy = Object.assign({}, options, { successEventName: 'success' });
+    const defaultOptions = { successEventName: 'success' };
+    const optionsCopy = { ...options, ...defaultOptions };
     super(undefined, undefined, name, optionsCopy);
   }
 
