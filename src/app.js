@@ -17,7 +17,7 @@ const { UploadError } = require('./errors');
 
 const { createValidator } = require('./validator.js');
 
-const HIGH_WATER_MARK = 16384;
+const HIGH_WATER_MARK = 16 * 1024; // 16 KiB
 const PORT = 3000;
 
 const server = express();
