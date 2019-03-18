@@ -8,7 +8,8 @@
     "jsdoc:build": "./node_modules/.bin/jsdoc ./src/**/*.js",
     "test": "./node_modules/.bin/mocha --ui bdd -c --check-leaks -R spec --timeout 5000 --exit './tests/index.js'",
     "nodemon:test": "./node_modules/.bin/nodemon --watch src --watch tests --watch index.js --exec npm test",
-    "nodemon:start": "./node_modules/.bin/nodemon --watch src --watch index.js --exec npm start"
+    "nodemon:start": "./node_modules/.bin/nodemon --watch src --watch index.js --exec npm start",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js ./tests/**/*.js"
   },
   "repository": {
     "type": "git",

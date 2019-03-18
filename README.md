@@ -31,6 +31,11 @@ To see debug info
 export DEBUG=*
 ```
 
+Generate docs
+```
+npm run jsdoc:build
+```
+
 ### Response example
 
 ```js
