@@ -85,7 +85,7 @@ server.post('/api/v1/upload', (req, res) => {
 
     uploadTask.on('success', (data) => {
       validator.validate('uploadFilter', data);
-      const response = Object.assign({ fileName }, data);
+      const response = { fileName, ...data };
       res.status(200).json(response);
     });
 

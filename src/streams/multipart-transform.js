@@ -15,7 +15,6 @@ const {
  * @throws {Errors.InvalidContentTypeError}
  */
 class MultipartTransform extends Transform {
-
   /**
    * @constructor
    * @param {Object} options - options

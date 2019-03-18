@@ -14,10 +14,11 @@ class UnzipTask extends Task {
    * @param {object} options - Task options
    */
   constructor(readable, options) {
-    const opt = Object.assign({}, options, {
+    const defaultOptions = {
       successEvent: 'end',
       dataEvent: 'entry'
-    });
+    };
+    const opt = { ...options, ...defaultOptions };
     super(readable, unzip.Parse(), 'unzip', opt);
   }
 

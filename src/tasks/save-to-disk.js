@@ -15,7 +15,8 @@ class SaveToDiskTask extends Task {
    * @param {object} options - Task options
    */
   constructor(readable, filePath, options) {
-    const optionsCopy = Object.assign({}, options, { successEvent: 'finish' });
+    const defaultOptions = { successEvent: 'finish' };
+    const optionsCopy = { ...options, ...defaultOptions };
     const path = resolve(filePath);
     const writable = fs.createWriteStream(path);
     super(readable, writable, 'save', optionsCopy);

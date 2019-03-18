@@ -7,8 +7,10 @@ const { EventEmitter } = require('events');
  * Task represents unit of work
  * @extends EventEmitter
  * @memberof Tasks
- * @property {string} successEvent=data - name of event which is emitting when writable stream finished his work
- * @property {string} dataEvent - name of event that should be passed up to parent listener as `data` event
+ * @property {string} successEvent=data - name of event which is emitting when
+ * writable stream finished his work
+ * @property {string} dataEvent - name of event that should be passed up to
+ * parent listener as `data` event
  * @property {object[]} taskList=[] - array of nested tasks
  * @property {object} data={} - data of this task
  * @property {number} taskTotal=0 - total amount of nested tasks
@@ -31,7 +33,7 @@ class Task extends EventEmitter {
   constructor(readable, writable, name, options) {
     super();
 
-    const optionsCopy = Object.assign({ successEvent: 'data' }, options);
+    const optionsCopy = { successEvent: 'data', ...options };
     this.successEvent = optionsCopy.successEvent;
     this.dataEvent = optionsCopy.dataEvent;
     this.taskList = [];

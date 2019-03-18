@@ -12,7 +12,8 @@ class HashTask extends Task {
    * @param {object} options - task options
    */
   constructor(readable, options) {
-    const optionsCopy = Object.assign({}, options, { successEventName: 'data' });
+    const defaultOptions = { successEventName: 'data' };
+    const optionsCopy = { ...options, ...defaultOptions };
     super(readable, createHash(options), 'md5', optionsCopy);
   }
 }

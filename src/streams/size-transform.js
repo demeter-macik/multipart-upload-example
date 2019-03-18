@@ -12,11 +12,12 @@ class SizeTransform extends Transform {
    * @param {object} options stream options {@link https://nodejs.org/api/stream.html|Node Stream}
    */
   constructor(options) {
-    const optionsCopy = Object.assign({}, options, {
+    const defaultOptions = {
       objectMode: false,
       readableObjectMode: true,
       writableObjectMode: false
-    });
+    };
+    const optionsCopy = { ...options, ...defaultOptions };
     super(optionsCopy);
     this.size = 0;
   }
