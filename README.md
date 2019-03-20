@@ -4,7 +4,7 @@ Simple multipart uploading zip-file example with uncompressing, calculating hash
 
 ### How it works
 
-Uploading process is separated into simple tasks: unzip, calculate hash, size. All operations are running in `parallel` streams. That means that application require only 16KiB * task count RAM to upload zip-file of any size. You can handle many uploads with reasonable RAM size. You can change `HIGH_WATER_MARK` (/src/app.js:20) value to change streams max buffer size.
+Uploading process is separated into simple tasks: unzip, calculate hash, size. All operations are running in `parallel` streams. That means that application require only 16KiB * task count RAM to upload large zip-files. You can handle many uploads with reasonable RAM size. You can change `HIGH_WATER_MARK` constant (/src/app.js:20) value to change streams max buffer size.
 
 ![testing mesh](https://github.com/demeter-macik/multipart-upload-example/blob/develop/docs/images/multipart-upload-stream.png)
 
