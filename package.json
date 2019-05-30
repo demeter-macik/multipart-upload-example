@@ -39,9 +39,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "form-data": "^2.3.3",
-    "jsdoc": "^3.5.5",
+    "jsdoc": "^3.6.2",
     "lodash": "^4.17.11",
-    "mocha": "^6.0.2",
+    "mocha": "^6.1.4",
     "nodemon": "^1.18.10"
   },
   "dependencies": {
