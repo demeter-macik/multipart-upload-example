@@ -29,26 +29,26 @@
   },
   "homepage": "https://github.com/demeter-macik/multipart-upload-example#readme",
   "devDependencies": {
-    "axios": "^0.18.0",
-    "babel-eslint": "^10.0.1",
+    "axios": "^0.19.0",
+    "babel-eslint": "^10.0.3",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
-    "eslint": "^5.15.1",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "form-data": "^2.3.3",
-    "jsdoc": "^3.6.2",
-    "lodash": "^4.17.11",
-    "mocha": "^6.1.4",
-    "nodemon": "^1.18.10"
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "form-data": "^2.5.1",
+    "jsdoc": "^3.6.3",
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.2"
   },
   "dependencies": {
-    "ajv": "^6.10.0",
-    "busboy": "^0.3.0",
-    "express": "^4.16.4",
-    "unzip-stream": "^0.3.0",
-    "uuid": "^3.3.2"
+    "ajv": "6.10.2",
+    "busboy": "0.3.1",
+    "express": "4.17.1",
+    "unzip-stream": "0.3.0",
+    "uuid": "3.3.3"
   }
 }
