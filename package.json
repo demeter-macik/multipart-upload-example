@@ -40,7 +40,7 @@
     "eslint-plugin-react": "^7.14.3",
     "form-data": "^2.5.1",
     "jsdoc": "^3.6.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mocha": "^6.2.0",
     "nodemon": "^1.19.2"
   },
